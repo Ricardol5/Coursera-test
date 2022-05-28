@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Bem Vindos À GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Ricardol5/Coursera-test/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Você pode usar o  [editor on GitHub](https://github.com/Ricardol5/Coursera-test/edit/gh-pages/index.md) para fazer manutenção do conteudo desta homepage em Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Nunca permita que alguem faça alterações em seu repositório principal, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
