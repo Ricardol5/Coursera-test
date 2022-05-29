@@ -1,17 +1,499 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>div and span elements</title>
-</head>
-<body>
-  <div>*** DIV 1: primeira divisao ***</div>
-  <div>*** DIV 2: segunda divisao ***</div>
-  <span>*** SPAN 1: terceira divisao ***</span>
-  <div>
-    *** DIV 3: vem logo apos spam 1 
-    <span>*** SPAN 2: dentro da divisao 3 ***</span>
-    continua o conteudo da divisao 3 apos o span 2  ***
-  </div>
-</body>
-</html>
+<HTML><HEAD><TITLE>Maria pede por nós</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><!-- Created with the CoffeeCup HTML Editor++ --><!--     /web/20091020042526/http://www.coffeecup.com/editor      -->
+<META name=GENERATOR content="MSHTML 9.00.8112.16464"></HEAD>
+<BODY background=Maria%20pede%20por%20nós_arquivos/cloudtile.jpg text=#000000 
+vLink=#800080 link=#ff0000><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<SCRIPT type=text/javascript 
+src="Maria%20pede%20por%20nós_arquivos/disclaim-element.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="Maria%20pede%20por%20nós_arquivos/graph-calc.js"></SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="Maria%20pede%20por%20nós_arquivos/jquery.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/geocities.com\/CapitolHill\/Lobby\/5820\/maria.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Out";
+var displayYear = "2009";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+  if(val == trackerVal) {
+    return;
+  }
+  if(val == "inline") {
+    document.getElementById("displayYearEl").style.color = "#ec008c";
+    document.getElementById("displayMonthEl").style.color = "#ec008c";
+    document.getElementById("displayDayEl").style.color = "#ec008c";    
+  } else {
+    document.getElementById("displayYearEl").innerHTML = displayYear;
+    document.getElementById("displayYearEl").style.color = "#ff0";
+    document.getElementById("displayMonthEl").innerHTML = displayMonth;
+    document.getElementById("displayMonthEl").style.color = "#ff0";
+    document.getElementById("displayDayEl").innerHTML = displayDay;
+    document.getElementById("displayDayEl").style.color = "#ff0";
+  }
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+  var thing = jQuery(obj);
+  if((thing == undefined) 
+      || (typeof thing == "undefined") 
+      || (typeof thing.offset == "undefined")) {
+    return getElementX(obj);
+  }
+  return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+  if(xOff < 0) {
+    xOff = 0;
+  } else if(xOff > imgWidth) {
+    xOff = imgWidth;
+  }
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+  var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+  if(monthOff % 2 == 1) {
+    day = 15;
+  }
+  var dateString = 
+    zeroPad(year + firstYear) + 
+    zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  var monthString = prettyMonths[monthOfYear];
+  document.getElementById("displayYearEl").innerHTML = year + 1996;
+  document.getElementById("displayMonthEl").innerHTML = monthString;
+  // looks too jarring when it changes..
+  //document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</SCRIPT>
+
+<STYLE type=text/css>BODY {
+  MIN-WIDTH: 800px !important; MARGIN-TOP: 0px !important; PADDING-TOP: 0px !important
+}
+#wm-ipp A:hover {
+  TEXT-DECORATION: underline !important
+}
+</STYLE>
+
+<DIV 
+style="Z-INDEX: 9000; POSITION: relative; MIN-WIDTH: 800px; PADDING-BOTTOM: 0px; MIN-HEIGHT: 70px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: none; PADDING-TOP: 0px" 
+id=wm-ipp>
+<DIV 
+style="BACKGROUND-IMAGE: url(/static/images/toolbar/wm_tb_bk_trns.png); BORDER-BOTTOM: #000 5px solid; POSITION: fixed; MIN-WIDTH: 780px; TEXT-ALIGN: center; BORDER-LEFT: #000 5px solid; PADDING-BOTTOM: 0px !important; MARGIN: 0px; PADDING-LEFT: 0px !important; WIDTH: 97%; PADDING-RIGHT: 0px !important; FONT-FAMILY: 'Lucida Grande','Arial',sans-serif !important; FONT-SIZE: 11px !important; BORDER-TOP: medium none; BORDER-RIGHT: #000 5px solid; PADDING-TOP: 0px !important; -moz-box-shadow: 1px 1px 3px #333; -webkit-box-shadow: 1px 1px 3px #333; box-shadow: 1px 1px 3px #333" 
+id=wm-ipp-inside>
+<TABLE 
+style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; BORDER-COLLAPSE: collapse; PADDING-TOP: 0px">
+  <TBODY>
+  <TR>
+    <TD 
+    style="MIN-WIDTH: 110px; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; VERTICAL-ALIGN: top; PADDING-TOP: 10px"><A 
+      style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: transparent; BORDER-TOP: medium none; BORDER-RIGHT: medium none" 
+      title="Wayback Machine home page" href="http://web.archive.org/web/"><IMG 
+      border=0 alt="Wayback Machine" 
+      src="Maria%20pede%20por%20nós_arquivos/wayback-toolbar-logo.png" width=110 
+      height=39></A> </TD>
+    <TD 
+    style="TEXT-ALIGN: center; PADDING-BOTTOM: 0px !important; PADDING-LEFT: 0px !important; WIDTH: 100%; PADDING-RIGHT: 0px !important; VERTICAL-ALIGN: top; PADDING-TOP: 0px !important">
+      <TABLE 
+      style="PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 570px; PADDING-RIGHT: 0px; BORDER-COLLAPSE: collapse; PADDING-TOP: 0px">
+        <TBODY>
+        <TR>
+          <TD 
+          style="PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 3px" 
+          colSpan=2>
+            <FORM 
+            style="PADDING-BOTTOM: 0px !important; MARGIN: 0px; PADDING-LEFT: 0px !important; PADDING-RIGHT: 0px !important; PADDING-TOP: 0px !important" 
+            id=wmtb method=get name=wmtb action=/web/form-submit.jsp 
+            target=_top><INPUT 
+            style="WIDTH: 400px; FONT-FAMILY: 'Lucida Grande','Arial',sans-serif; FONT-SIZE: 11px" 
+            id=wmtbURL onfocus=javascript:this.focus();this.select(); name=url 
+            value=http://geocities.com/CapitolHill/Lobby/5820/maria.html><INPUT 
+            name=type value=replay type=hidden><INPUT name=date 
+            value=20091020042526 type=hidden><INPUT style="FONT-FAMILY: 'Lucida Grande','Arial',sans-serif; MARGIN-LEFT: 5px; FONT-SIZE: 11px" value=Go type=submit><SPAN 
+            style="DISPLAY: block" id=wm_tb_options></SPAN></FORM></TD>
+          <TD 
+          style="PADDING-BOTTOM: 0px !important; PADDING-LEFT: 0px !important; PADDING-RIGHT: 0px !important; VERTICAL-ALIGN: bottom; PADDING-TOP: 5px !important" 
+          rowSpan=2>
+            <TABLE 
+            style="WIDTH: 110px; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Helvetica','Lucida Grande','Arial',sans-serif; COLOR: #99a">
+              <TBODY><!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+              <TR 
+style="WIDTH: 110px; HEIGHT: 16px; FONT-SIZE: 10px !important">
+                <TD 
+                style="TEXT-ALIGN: right; TEXT-TRANSFORM: uppercase; PADDING-RIGHT: 9px; WHITE-SPACE: nowrap; FONT-SIZE: 11px !important; OVERFLOW: visible; FONT-WEIGHT: bold" 
+                noWrap><A 
+                  style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: transparent; COLOR: #33f; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none; TEXT-DECORATION: none" 
+                  title="30 Jul 2009" 
+                  href="http://web.archive.org/web/20090730194946/http://geocities.com/CapitolHill/Lobby/5820/maria.html"><STRONG>JUL</STRONG></A> 
+                </TD>
+                <TD 
+                style="TEXT-ALIGN: center; TEXT-TRANSFORM: uppercase; WIDTH: 34px; BACKGROUND: #000; HEIGHT: 15px; COLOR: #ff0; FONT-SIZE: 11px !important; FONT-WEIGHT: bold; PADDING-TOP: 1px" 
+                id=displayMonthEl 
+                  title="You are here: 4:25:26 Out 20, 2009">OUT</TD>
+                <TD 
+                style="TEXT-TRANSFORM: uppercase; PADDING-LEFT: 9px; WHITE-SPACE: nowrap; FONT-SIZE: 11px !important; OVERFLOW: visible; FONT-WEIGHT: bold" 
+                noWrap>Nov </TD></TR><!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+              <TR>
+                <TD 
+                style="TEXT-ALIGN: right !important; PADDING-RIGHT: 9px; WHITE-SPACE: nowrap; VERTICAL-ALIGN: middle !important; OVERFLOW: visible" 
+                noWrap><A 
+                  style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: transparent; BORDER-TOP: medium none; BORDER-RIGHT: medium none" 
+                  title="19:49:46 Jul 30, 2009" 
+                  href="http://web.archive.org/web/20090730194946/http://geocities.com/CapitolHill/Lobby/5820/maria.html"><IMG 
+                  border=0 alt="Previous capture" 
+                  src="Maria%20pede%20por%20nós_arquivos/wm_tb_prv_on.png" 
+                  width=14 height=16></A> </TD>
+                <TD 
+                style="TEXT-ALIGN: center; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 34px; PADDING-RIGHT: 0px; BACKGROUND: #000; HEIGHT: 24px; COLOR: #ff0; FONT-SIZE: 24px; FONT-WEIGHT: bold; PADDING-TOP: 2px" 
+                id=displayDayEl 
+                title="You are here: 4:25:26 Out 20, 2009">20</TD>
+                <TD 
+                style="TEXT-ALIGN: left !important; PADDING-LEFT: 9px; WHITE-SPACE: nowrap; VERTICAL-ALIGN: middle !important; OVERFLOW: visible" 
+                noWrap><A 
+                  style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: transparent; BORDER-TOP: medium none; BORDER-RIGHT: medium none" 
+                  title="2:59:10 Out 28, 2009" 
+                  href="http://web.archive.org/web/20091028025910/http://geocities.com/CapitolHill/Lobby/5820/maria.html"><IMG 
+                  border=0 alt="Next capture" 
+                  src="Maria%20pede%20por%20nós_arquivos/wm_tb_nxt_on.png" 
+                  width=14 height=16></A> </TD></TR><!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+              <TR 
+                style="WIDTH: 110px; HEIGHT: 13px; FONT-SIZE: 9px !important"><TD 
+                style="TEXT-ALIGN: right; PADDING-RIGHT: 9px; WHITE-SPACE: nowrap; FONT-SIZE: 11px !important; OVERFLOW: visible; FONT-WEIGHT: bold" 
+                noWrap><A 
+                  style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: transparent; COLOR: #33f; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none; TEXT-DECORATION: none" 
+                  title="4 Set 2008" 
+                  href="http://web.archive.org/web/20080904091747/http://www.geocities.com/CapitolHill/Lobby/5820/maria.html"><STRONG>2008</STRONG></A> 
+                </TD>
+                <TD 
+                style="TEXT-ALIGN: center; WIDTH: 34px; BACKGROUND: #000; HEIGHT: 13px; COLOR: #ff0; FONT-SIZE: 11px !important; FONT-WEIGHT: bold; PADDING-TOP: 1px" 
+                id=displayYearEl 
+                  title="You are here: 4:25:26 Out 20, 2009">2009</TD>
+                <TD 
+                style="PADDING-LEFT: 9px; WHITE-SPACE: nowrap; FONT-SIZE: 11px !important; OVERFLOW: visible; FONT-WEIGHT: bold" 
+                noWrap>2010 </TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD 
+          style="PADDING-BOTTOM: 0px !important; PADDING-LEFT: 0px !important; PADDING-RIGHT: 0px !important; VERTICAL-ALIGN: middle; PADDING-TOP: 0px !important"><A 
+            style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND-COLOR: transparent; COLOR: #33f; FONT-SIZE: 11px; BORDER-TOP: medium none; FONT-WEIGHT: bold; BORDER-RIGHT: medium none" 
+            title="See a list of every capture for this URL" 
+            href="http://web.archive.org/web/20091020042526*/http://geocities.com/CapitolHill/Lobby/5820/maria.html"><STRONG>16 
+            captures</STRONG></A> 
+            <DIV 
+            style="PADDING-BOTTOM: 0px !important; MARGIN: 0px; PADDING-LEFT: 0px !important; PADDING-RIGHT: 0px !important; WHITE-SPACE: nowrap; COLOR: #666; FONT-SIZE: 9px; PADDING-TOP: 2px !important" 
+            title="Timespan for captures of this URL">13 Out 99 - 28 Out 
+          09</DIV></TD>
+          <TD 
+          style="PADDING-BOTTOM: 0px !important; PADDING-LEFT: 0px !important; PADDING-RIGHT: 0px !important; PADDING-TOP: 0px !important"><A 
+            style="POSITION: relative; WIDTH: 450px; WHITE-SPACE: nowrap; HEIGHT: 27px" 
+            id=wm-graph-anchor 
+            href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/">
+            <DIV 
+            style="POSITION: relative; BACKGROUND-COLOR: #fff; WIDTH: 450px; WHITE-SPACE: nowrap; HEIGHT: 27px; CURSOR: pointer; BORDER-RIGHT: #ccc 1px solid" 
+            id=wm-ipp-sparkline title="Explore captures for this URL"><IMG 
+            style="Z-INDEX: 9012; POSITION: absolute; TOP: 0px; LEFT: 0px" 
+            id=sparklineImgId onmouseover="showTrackers('inline');" 
+            onmousemove=trackMouseMove(event,this) 
+            onmouseout="showTrackers('none');" border=0 alt=sparklines 
+            src="Maria%20pede%20por%20nós_arquivos/graph.png" width=450 
+            height=27></IMG> <IMG 
+            style="Z-INDEX: 9010; POSITION: absolute; DISPLAY: none" 
+            id=wbMouseTrackYearImg border=0 
+            src="Maria%20pede%20por%20nós_arquivos/transp-yellow-pixel.png" 
+            width=25 height=27></IMG> <IMG 
+            style="Z-INDEX: 9011; POSITION: absolute; DISPLAY: none" 
+            id=wbMouseTrackMonthImg border=0 
+            src="Maria%20pede%20por%20nós_arquivos/transp-red-pixel.png" width=2 
+            height=27></IMG> </DIV></A></TD></TR></TBODY></TABLE></TD>
+    <TD 
+    style="TEXT-ALIGN: right; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; WIDTH: 65px; PADDING-RIGHT: 5px; FONT-SIZE: 11px !important; PADDING-TOP: 5px"><A 
+      style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-RIGHT: 18px; DISPLAY: block; FONT-FAMILY: 'Lucida Grande','Arial',sans-serif; MARGIN-BOTTOM: 23px; BACKGROUND: url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0px; COLOR: #33f; BORDER-TOP: medium none; BORDER-RIGHT: medium none" 
+      title="Close the toolbar" 
+      onclick="document.getElementById('wm-ipp').style.display='none';" 
+      href="javascript:;">Close</A> <A 
+      style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-RIGHT: 18px; DISPLAY: block; FONT-FAMILY: 'Lucida Grande','Arial',sans-serif; BACKGROUND: url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0px; COLOR: #33f; BORDER-TOP: medium none; BORDER-RIGHT: medium none" 
+      title="Get some help using the Wayback Machine" 
+      href="http://faq.web.archive.org/">Help</A> 
+</TD></TR></TBODY></TABLE></DIV></DIV>
+<SCRIPT type=text/javascript>
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</SCRIPT>
+<!-- END WAYBACK TOOLBAR INSERT --><!-- following code added by server. PLEASE REMOVE --><!-- preceding code added by server. PLEASE REMOVE --><IMG 
+border=1 align=left src="Maria%20pede%20por%20nós_arquivos/gospa7.gif"><IMG 
+border=1 align=right src="Maria%20pede%20por%20nós_arquivos/gospa8.gif">
+<CENTER>
+<H2><I>"Eu Tenho sede...</I></H2>
+<P></CENTER><BR>
+<CENTER>
+<H3>...A água que se dá a um necessitado com amor e carinho é a água que se dá 
+ao próprio Deus."</H3></CENTER><BR><BR><BR><BR><IMG 
+src="Maria%20pede%20por%20nós_arquivos/COLORBAR.gif" width="100%" 
+height=2><BR><BR>
+<H4>"Descia um homem de Jerusalém a Jericó. Pelo caminho caiu em poder de 
+ladrões que, depois de o despojarem e espancarem, se foram, deixando-o 
+semimorto. Por acaso desceu pelo mesmo caminho um sacerdote. Vendo-o, passou ao 
+largo. Do mesmo modo, um levita, passando por aquele lugar, também o viu e 
+passou adiante. Mas um samaritano, que estava de viagem, chegou a seu lado e, 
+vendo, sentiu compaixão. Aproximou-se, tratou-lhe as feridas, derramando azeite 
+e vinho. fê-lo subir em sua própria montaria, conduzio-o à hospedaria, e teve 
+cuidado dele. E pela manhã, tirando duas moedas de prata, deu ao hospedeiro e 
+disse-lhe: "cuida dele, e o que gastares a mais, na volta eu te pagarei". Quem 
+desses três te parece ter-se tornado o <A 
+href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/proximo.html">próximo</A> 
+daquele que caiu em poder dos ladões?" Ele respondeu: "Quem usou de misericórdia 
+para com ele". então Jesus lhe disse: "Vai e faze tu o 
+mesmo!".</H4><ALIGN=RIGHT>
+<H5><I>Lucas 30-37</I></H5><BR><IMG 
+src="Maria%20pede%20por%20nós_arquivos/COLORBAR.gif" width="100%" 
+height=2><BR><BR><BR>
+<P align=left>
+<H4>Dia 10-12-1925, apareceu-lhe a SS. Virgem e, ao lado, suspenso em uma nuvem 
+luminosa, um Menino. A SS. Virgem, pondo-lhe no ombro a mão e mostrando, ao 
+mesmo tempo, um coração que tinha na outra mão, cercado de espinhos.<BR>Ao mesmo 
+tempo, disse o Menino:<BR>-Tem pena do Coração de Tua SS. Mãe que está coberto 
+de espinhos que os homens ingratos a todos os momentos Lhe cravam sem haver quem 
+faça um ato de reparação para os tirar.<BR>Em seguida, disse a SS. 
+Virgem:<BR>-Olha minha filha, O Meu Coração cercado de espinhos que os homens 
+ingratos a todos os momentos Me cravam, com blasfemias e ingratidões. Tu, ao 
+menos, vê de Me consolar e diz que :<BR><BR>
+<CENTER>"<I>Todos aqueles que durante 5 meses, ao 1 sábado, se confessarem, 
+recebendo a Sagrada Comunhão, rezando um Terço e Me fizerem 15 minutos de 
+companhia, meditando nos 15 mistérios do Rosário, com o fim de Me desagravar, Eu 
+prometo, assistir-lhes, na hora da morte, com todas as graças necessárias para a 
+salvação dessas almas."</CENTER></I></H4>
+<P></P><ALIGN=RIGHT>
+<H5>Memórias da Irmão Lucia - Fátima.</H5><BR><IMG 
+src="Maria%20pede%20por%20nós_arquivos/COLORBAR.gif" width="100%" 
+height=2><BR><BR><BR><IMG border=0 align=left 
+src="Maria%20pede%20por%20nós_arquivos/gospa5.gif">
+<P align=center><FONT face=Arial><STRONG>Desde o ínicio da era cristã, que a Mãe 
+de Deus, vem aparecendo nos mais diversos locais, e uma constante em suas 
+aparições, é o seu pedido para que os homens se dediquem à Oração do Terço, pois 
+é através da oração que comungamos com Cristo, E Ela avisa, <BR>"...Este é um 
+tempo em que a Terra e o Céu estão ligados através de Mim."<BR>Senão 
+Vejamos:</STRONG></FONT></P><BR><BR>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD width="55%">
+      <DL>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/primordio.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A><FONT 
+        color=blue>
+        <P align=left>
+        <H3>Primeiras Aparições</H3>
+        <P></P></FONT>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/aparicoes.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A>
+        <P align=right><FONT color=blue>
+        <H3>Aparições recentes</H3>
+        <P></P></FONT>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/espanha.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A>
+        <P align=right><FONT color=blue>
+        <H3>A Virgem do Escorial</FONT></H3>
+        <P></P>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/mensagens.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A><FONT 
+        color=blue>
+        <P align=left>
+        <H3>Mensagens Principais<IMG align=bottom 
+        src="Maria%20pede%20por%20nós_arquivos/new2.gif" width=28 
+height=11></H3>
+        <P></P></FONT></DT></DL>
+    <TD vAlign=top width="55%">
+      <DL>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/brasil.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A><FONT 
+        color=blue>
+        <H3>Aparições no Brasil<IMG align=bottom 
+        src="Maria%20pede%20por%20nós_arquivos/new2.gif" width=28 
+height=11></H3>
+        <P></P></FONT>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/batepapo.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A>
+        <P align=right><FONT color=blue>
+        <H3>Bate Papo Católico</FONT></H3>
+        <P></P>
+        <DT><A 
+        href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/retrato.html"><IMG 
+        border=0 align=left 
+        src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A>
+        <P align=right><FONT color=blue>
+        <H3>Retrato de Jesus</H3>
+        <P></P></FONT></DT></DL>
+    <TD width="34%">&nbsp;</TD></TR></TBODY></TABLE><IMG 
+src="Maria%20pede%20por%20nós_arquivos/COLORBAR.gif" width="100%" 
+height=2><BR><BR><BR><IMG align=right 
+src="Maria%20pede%20por%20nós_arquivos/maria7.jpg" width=220 HEIGTH="400"> 
+<CENTER><B><BR><BR>
+<CENTER><FONT color=#0000ff face=Arial>O ROSÁRIO</FONT></CENTER><BR><BR><BR>O 
+Rosário é um objeto sagrado, uma forma de conversar com Deus, através do Rosário 
+temos um contato direto com Nossa Senhora; "Suas orações serão como 
+<I>flores</I> postas por mim à adornar o trono do Senhor." quando carregamos o 
+Rosário, seja no bolso ou no carro, recebemos uma proteção da Mãe eternar, 
+existe várias formas de se rezar o Rosário, mas todas tem em comum, à comunhão 
+em Cristo. É maravilhoso quando mergulhamos nas passagens bíblicas que nos leva 
+o Rosário. Como está cada vez mais raro dedicarmos nosso tempo ao Senhor, temos 
+o Terço como acalento, trata-se de uma fragmentação do Rosário, que é composto 
+por três<BR><A 
+href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/terco.html">Terços</A><IMG 
+align=bottom src="Maria%20pede%20por%20nós_arquivos/new2.gif" width=28 
+height=11>.</B> </CENTER><BR><BR><BR><IMG 
+src="Maria%20pede%20por%20nós_arquivos/COLORBAR.gif" width="100%" 
+height=2><BR><BR><A 
+href="http://web.archive.org/web/20091020042526/http://geocities.com/CapitolHill/Lobby/5820/index.html"><IMG 
+border=0 align=left 
+src="Maria%20pede%20por%20nós_arquivos/blupulse.gif"></A><FONT color=blue>
+<P align=left>
+<H3>Inicio, ou...</H3>
+<P></P></FONT><! -- Inicio -->
+<TABLE border=0 width=400>
+  <TBODY>
+  <TR>
+    <TD width=100 align=center><A 
+      href="http://web.archive.org/web/20091020042526/http://www.buscacatolica.com.br/"><IMG 
+      border=0 src="Maria%20pede%20por%20nós_arquivos/logo.gif"></A></TD>
+    <TD width=300 align=center>
+      <FORM method=get 
+      action=/web/20091020042526/http://www.buscacatolica.com.br/cgi-bin/buscacatolica.pl>
+      <P align=center><BR><INPUT name=keys> <INPUT value=Buscar type=submit> 
+      </P></FORM></TD></TR></TBODY></TABLE><! -- Final --><!-- This scrolls ' Your Message Here ' in the status bar -->
+<SCRIPT language=JavaScript>
+//Modified by Coffeecup.com
+
+function infoscroll(seed,looped)
+{
+  var text1  = " Melhor Visualização com 16 milhões de cores";
+  var text2  = "                   Não deixe de ler ESCORIAL E A ESPANHA RECENTE, é simplesmente magnifico, um presente. Confira as novas mensagens em MENSAGENS PRINCIPAIS ";        
+  var msg=text1+text2;
+  var putout = " ";
+  var c   = 1;
+
+  if (looped > 10) 
+  {  window.status="<Thanks !>";  }
+  else if (seed > 100) 
+  {
+     seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,100);
+  }
+  else if (seed <= 100 && seed > 0) 
+  {
+    for (c=0 ; c < seed ; c++) 
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);  
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,100);
+  }
+  else if (seed <= 0) 
+  {
+    if (-seed < msg.length) 
+    {
+      putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,100); // 100
+    }
+    else 
+    {
+      window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,75); // 75
+    }
+  }
+}
+// -->
+
+<!--
+infoscroll(100,1)
+// -->
+</SCRIPT>
+<BR><EMBED hidden=true 
+src=/web/20091020042526oe_/http://geocities.com/CapitolHill/Lobby/5820/avemaria.mid> 
+<BGSOUND 
+src=""><!-- text below generated by server. PLEASE REMOVE --></OBJECT></LAYER>
+<DIV></DIV></SPAN></STYLE></NOSCRIPT></TABLE></SCRIPT></APPLET>
+<SCRIPT language=JavaScript 
+src="Maria%20pede%20por%20nós_arquivos/mc.js"></SCRIPT>
+
+<SCRIPT language=JavaScript 
+src="Maria%20pede%20por%20nós_arquivos/geov2_001.js"></SCRIPT>
+
+<SCRIPT language=javascript>geovisit();</SCRIPT>
+<NOSCRIPT></NOSCRIPT><IMG alt=1 src="Maria%20pede%20por%20nós_arquivos/serv.gif" 
+width=1 height=1> <!--
+     FILE ARCHIVED ON 4:25:26 Out 20, 2009 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 0:10:48 Abr 20, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+--></BODY></HTML>
